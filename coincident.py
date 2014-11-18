@@ -2,7 +2,7 @@ import sys, random, unittest
 
 def findCoincident(a, b):
     ret=[]
-    for x in range(0, len(a)):
+    for x in range(0, min(len(a), len(b))):
         if(a[x]==b[x]):
             ret.append(x)
 
@@ -37,4 +37,4 @@ class TestCoincident(unittest.TestCase):
 
     def test_diffLength2(self):
         res = findCoincident([1,2,3,4], [1,2])
-        self.assertTrue(res==[1,2])
+        self.assertTrue(res==[0,1])
