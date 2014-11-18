@@ -38,3 +38,6 @@ class TestCoincident(unittest.TestCase):
     def test_diffLength2(self):
         res = findCoincident([1,2,3,4], [1,2])
         self.assertTrue(res==[0,1])
+
+if __name__ == '__main__':
+    unittest.main()
