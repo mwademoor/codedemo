@@ -22,6 +22,10 @@ class TestCoincident(unittest.TestCase):
         res = findCoincident([1,2,3], [4,5,6])
         self.assertTrue(len(res)==0)
 
+    def test_allMatches(self):
+        res = findCoincident([1,2,3], [1,2,3])
+        self.assertTrue(res==[0,1,2])
+
     def test_diffLength(self):
         res = findCoincident([1,2], [1,2,3,4])
         self.assertTrue(res==[0,1])
