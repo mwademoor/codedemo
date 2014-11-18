@@ -5,10 +5,10 @@ def main():
     b=[]
     populateLists(a,b)
     matches=findCoincident(a,b)
-    print "Found ", len(matches)," matches"
+    print "Found %s match%s" % (len(matches), "es" if len(matches)!=1 else "")
 
     for x in matches:
-        print "Concidence at ",x," ",a[x], " == ", b[x]
+        print "Concidence at %s: %s == %s" % (x, a[x], b[x])
 
 
 # Standard boilerplate to call the main() function to begin
